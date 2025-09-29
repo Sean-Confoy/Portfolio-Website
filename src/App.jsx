@@ -98,7 +98,7 @@ export default function App() {
         {/* Hero */}
        <section id="about" className="py-16 md:py-24 flex flex-col md:flex-row items-center gap-10">
   <img
-    src={`${import.meta.env.BASE_URL}headshot.jpg`}
+    src={`${import.meta.env.BASE_URL}images/headshot.jpg`}
     alt="Sean Confoy headshot"
     className="h-40 w-40 rounded-full object-cover border-2 border-neutral-800 shadow-lg"
   />
