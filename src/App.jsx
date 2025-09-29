@@ -96,59 +96,109 @@ export default function App() {
 
       <main className="mx-auto max-w-6xl px-4">
         {/* Hero */}
-        <section id="about" className="py-16 md:py-24">
-          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight">
-            Mechanical Engineer & Payload Designer
-          </h1>
-          <p className="mt-4 max-w-2xl text-neutral-300">
-            Vanderbilt B.E. (GPA 3.99). Hands-on builder across aerospace payloads, mechanisms, and controls —
-            experience spanning student rocketry, naval systems, and assistive/medical devices.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              className="rounded-2xl border border-neutral-800 px-4 py-2 text-sm hover:bg-neutral-900"
-              href="https://www.linkedin.com/in/sean-confoy/" target="_blank" rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-            <a
-              className="rounded-2xl border border-neutral-800 px-4 py-2 text-sm hover:bg-neutral-900"
-              href="#"
-              onClick={(e) => { e.preventDefault(); alert('Hook this up to your hosted PDF'); }}
-            >
-              Download Résumé
-            </a>
-          </div>
-        </section>
+       <section id="about" className="py-16 md:py-24 flex flex-col md:flex-row items-center gap-10">
+  <img
+    src={`${import.meta.env.BASE_URL}headshot.png`}
+    alt="Sean Confoy headshot"
+    className="h-40 w-40 rounded-full object-cover border-2 border-neutral-800 shadow-lg"
+  />
 
-        {/* Projects */}
-        <section id="projects" className="py-12 md:py-20">
-          <div className="flex items-end justify-between">
-            <h2 className="text-2xl md:text-3xl font-semibold">Projects</h2>
-            <p className="text-sm opacity-70">Selected work</p>
-          </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {projects.map((p) => (
-              <article
-                key={p.title}
-                className="rounded-2xl border border-neutral-900 bg-neutral-950 p-5 hover:shadow-2xl hover:shadow-black/30"
-              >
-                <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-lg font-medium tracking-tight">{p.title}</h3>
-                  <span className="text-xs opacity-70">{p.timeframe}</span>
-                </div>
-                <p className="mt-3 text-sm text-neutral-300">{p.summary}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <span key={t} className="rounded-full border border-neutral-800 px-2 py-0.5 text-xs opacity-80">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+  <div>
+    <h1 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight">
+      Mechanical Engineer & Payload Designer
+    </h1>
+    <p className="mt-4 max-w-2xl text-neutral-300">
+      Vanderbilt B.E. (GPA 3.99). Hands-on builder across aerospace payloads, mechanisms,
+      and controls — experience spanning student rocketry, naval systems, and assistive/medical devices.
+    </p>
+    <div className="mt-6 flex flex-wrap gap-3">
+      <a className="rounded-2xl border border-neutral-800 px-4 py-2 text-sm hover:bg-neutral-900"
+         href="https://www.linkedin.com/in/sean-confoy/"
+         target="_blank"
+         rel="noreferrer">
+        LinkedIn
+      </a>
+      <a className="rounded-2xl border border-neutral-800 px-4 py-2 text-sm hover:bg-neutral-900"
+         href={`${import.meta.env.BASE_URL}Sean-Confoy-Resume.pdf`}
+         target="_blank"
+         rel="noreferrer">
+        Download Résumé
+      </a>
+    </div>
+  </div>
+</section>
+
+
+       {/* Projects */}
+<section id="projects" className="py-12 md:py-20">
+  <h2 className="text-2xl md:text-3xl font-semibold">Projects</h2>
+  <p className="text-sm opacity-70">Selected work and case studies</p>
+
+  <div className="mt-10 space-y-20">
+    {/* ================== T.O.M. Makeathon ================== */}
+    <article>
+      <div className="flex items-center gap-4">
+        <img
+          src={`${import.meta.env.BASE_URL}images/tom-logo.png`}
+          alt="Tikkun Olam Makers logo"
+          className="h-12 w-auto"
+          loading="lazy"
+        />
+        <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+          T.O.M. Makeathon — Assistive Technology
+        </h3>
+      </div>
+
+      {/* Images row */}
+      <div className="mt-6 grid gap-4 sm:grid-cols-3">
+        <img
+          src={`${import.meta.env.BASE_URL}images/tom-sketch.jpg`}
+          alt="Sketch of Switch backplate"
+          className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+          loading="lazy"
+        />
+        <img
+          src={`${import.meta.env.BASE_URL}images/tom-team.jpg`}
+          alt="Team group photo"
+          className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+          loading="lazy"
+        />
+        <img
+          src={`${import.meta.env.BASE_URL}images/tom-wheelchair.jpg`}
+          alt="Testing wheelchair mount"
+          className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Blurb */}
+      <div className="mt-6 text-sm text-neutral-300 space-y-3 leading-relaxed">
+        <p>
+          The T.O.M. Makeathon is a global organization that sponsors annual events aimed to create solutions to everyday challenges of people with disabilities. Vanderbilt hosts a student-led makeathon each year to build technology for “need-knowers” who apply for aid.
+        </p>
+        <p>
+          My team worked with a young girl named <strong>Miyako</strong>, diagnosed with a disease similar to scoliosis and cerebral palsy, to improve her daily tasks and hobbies. We prototyped three solutions: (1) an adapted <strong>sock-aid tool</strong>, (2) a <strong>sun shade</strong>, and (3) a <strong>Nintendo Switch mount</strong> for both her wheelchair and family car.
+        </p>
+        <p>
+          I led the Switch mount effort: adapting a ball-and-socket holder, designing a <strong>custom backplate</strong> for the car seat, and 3D-printing <strong>clamps and collars</strong> for her wheelchair. The initial sketch (left image) shows the concept. All devices were successfully delivered, and Miyako’s family was extremely grateful.
+        </p>
+      </div>
+
+      {/* Tags */}
+      <div className="mt-4 flex flex-wrap gap-2">
+        {["Human-Centered Design", "3D Printing", "CAD", "Rapid Prototyping"].map((t) => (
+          <span
+            key={t}
+            className="rounded-full border border-neutral-800 px-2 py-0.5 text-xs opacity-80"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+    </article>
+  </div>
+</section>
+
 
         {/* Experience */}
         <section id="experience" className="py-12 md:py-20">
