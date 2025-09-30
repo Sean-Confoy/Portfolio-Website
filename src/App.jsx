@@ -179,7 +179,7 @@ export default function App() {
 
 
       {/* Blurb */}
-      <div className="mt-6 text-sm text-neutral-300 space-y-3 leading-relaxed">
+      <div className="text-neutral-300 mb-4">
         <p>
           The T.O.M. Makeathon is a global organization that sponsors annual events aimed to create solutions to everyday challenges of people with disabilities. Vanderbilt hosts a student-led makeathon each year to build technology for “need-knowers” who apply for aid.
         </p>
