@@ -210,23 +210,39 @@ export default function App() {
     </h2>
   </div>
 
-  <div className="grid md:grid-cols-2 gap-6 mb-6">
+  {/* Image grid — clean, aligned, no borders */}
+<div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {/* Pelican case */}
+  <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
     <img
       src={`${import.meta.env.BASE_URL}images/pelican-case.jpg`}
       alt="Pelican case CAD model"
-      className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+      className="h-full w-full object-cover"
+      loading="lazy"
     />
+  </div>
+
+  {/* Control panel board */}
+  <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
     <img
       src={`${import.meta.env.BASE_URL}images/board.png`}
       alt="Control panel CAD model"
-      className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
-    />
-    <img
-      src={`${import.meta.env.BASE_URL}images/motor.jpg`}
-      alt="Motorized switch design"
-      className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+      className="h-full w-full object-cover"
+      loading="lazy"
     />
   </div>
+
+  {/* Motorized knob */}
+  <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+    <img
+      src={`${import.meta.env.BASE_URL}images/motor.jpg`}
+      alt="Motorized switch concept"
+      className="h-full w-full object-cover"
+      loading="lazy"
+    />
+  </div>
+</div>
+
 
   <p className="text-neutral-300 mb-4">
     The Vanderbilt Fusion Project is a student-run organization developing a soccer ball-sized 
