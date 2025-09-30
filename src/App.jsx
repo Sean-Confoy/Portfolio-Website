@@ -212,7 +212,7 @@ export default function App() {
 
   <div className="grid md:grid-cols-2 gap-6 mb-6">
     <img
-      src={`${import.meta.env.BASE_URL}images/pelica-case.png`}
+      src={`${import.meta.env.BASE_URL}images/pelican-case.jpg`}
       alt="Pelican case CAD model"
       className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
     />
