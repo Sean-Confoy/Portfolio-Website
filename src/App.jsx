@@ -149,27 +149,34 @@ export default function App() {
         </h3>
       </div>
 
-      {/* Images row */}
-      <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <img
-          src={`${import.meta.env.BASE_URL}images/tom-sketch.jpg`}
-          alt="Sketch of Switch backplate"
-          className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
-          loading="lazy"
-        />
-        <img
-          src={`${import.meta.env.BASE_URL}images/tom-team.jpg`}
-          alt="Team group photo"
-          className="h-full w-full object-cover"
-          loading="lazy"
-        />
-        <img
-          src={`${import.meta.env.BASE_URL}images/tom-wheelchair.jpg`}
-          alt="Testing wheelchair mount"
-          className="h-full w-full object-cover"
-          loading="lazy"
-        />
-      </div>
+      {/* Images row — uniform size, smaller */}
+<div className="mt-6 grid gap-4 sm:grid-cols-3">
+  <div className="aspect-[4/3] overflow-hidden rounded-xl">
+    <img
+      src={`${import.meta.env.BASE_URL}images/tom-sketch.jpg`}
+      alt="Sketch of Switch backplate"
+      className="h-full w-full object-cover"
+      loading="lazy"
+    />
+  </div>
+  <div className="aspect-[4/3] overflow-hidden rounded-xl">
+    <img
+      src={`${import.meta.env.BASE_URL}images/tom-team.jpg`}
+      alt="Team group photo"
+      className="h-full w-full object-cover"
+      loading="lazy"
+    />
+  </div>
+  <div className="aspect-[4/3] overflow-hidden rounded-xl">
+    <img
+      src={`${import.meta.env.BASE_URL}images/tom-wheelchair.jpg`}
+      alt="Testing wheelchair mount"
+      className="h-full w-full object-cover"
+      loading="lazy"
+    />
+  </div>
+</div>
+
 
       {/* Blurb */}
       <div className="mt-6 text-sm text-neutral-300 space-y-3 leading-relaxed">
@@ -211,7 +218,7 @@ export default function App() {
   </div>
 
   {/* Image grid — clean, aligned, no borders */}
-<div className="mt-6 mb-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div className="mt-6 mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
   {/* Pelican case */}
   <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
     <img
