@@ -98,7 +98,7 @@ export default function App() {
         {/* Hero */}
        <section id="about" className="py-16 md:py-24 flex flex-col md:flex-row items-center gap-10">
   <img
-    src={`${import.meta.env.BASE_URL}images/headshot.jpg`}
+    src={`${import.meta.env.BASE_URL}images/headshot.PNG`}
     alt="Sean Confoy headshot"
     className="h-40 w-40 rounded-full object-cover border-2 border-neutral-800 shadow-lg"
   />
@@ -160,13 +160,13 @@ export default function App() {
         <img
           src={`${import.meta.env.BASE_URL}images/tom-team.jpg`}
           alt="Team group photo"
-          className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+          className="h-full w-full object-cover"
           loading="lazy"
         />
         <img
           src={`${import.meta.env.BASE_URL}images/tom-wheelchair.jpg`}
           alt="Testing wheelchair mount"
-          className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+          className="h-full w-full object-cover"
           loading="lazy"
         />
       </div>
@@ -211,7 +211,7 @@ export default function App() {
   </div>
 
   {/* Image grid — clean, aligned, no borders */}
-<div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div className="mt-6 mb-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
   {/* Pelican case */}
   <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
     <img
