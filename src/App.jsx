@@ -198,7 +198,7 @@ export default function App() {
 
   {/* Button — same style as Fusion */}
   <a
-    href="https://tomglobal.org/about"
+    href="https://www.vanderbilt.edu/the-wondry/tikkun-olam-makers-2023-makeathon/"
     target="_blank"
     rel="noreferrer"
     className="inline-block mt-4 rounded-2xl border border-neutral-800 px-4 py-2 text-sm hover:bg-neutral-900"
@@ -216,6 +216,77 @@ export default function App() {
 </article>
 
   </div>
+  {/* ================== CAM Project ================== */}
+<section className="py-16 border-b border-neutral-900">
+  <div className="flex items-center gap-4 mb-6">
+    <img
+      src={`${import.meta.env.BASE_URL}images/cam-logo.jpg`}
+      alt="Cam project logo"
+      className="h-12 w-auto"
+    />
+    <h2 className="text-2xl font-semibold tracking-tight">
+      CAM Project — Walking Motion Simulation
+    </h2>
+  </div>
+
+  {/* Image grid */}
+  <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+      <img
+        src={`${import.meta.env.BASE_URL}images/cam-assembly.jpg`}
+        alt="CAM assembly rendering"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+      <img
+        src={`${import.meta.env.BASE_URL}images/follower-motion.jpg`}
+        alt="Follower motion graph"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+      <img
+        src={`${import.meta.env.BASE_URL}images/cam-physical-model.jpg`}
+        alt="Physical cam model"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+  {/* Blurb */}
+  <p className="text-neutral-300 mb-4">
+    This project focused on designing and prototyping a <strong>cam–follower
+    system</strong> to replicate the force a human foot applies to the ground
+    during walking. Using <strong>Dynacam</strong>, <strong>MATLAB</strong>, and
+    <strong> SolidWorks</strong>, the team derived smooth displacement,
+    velocity, acceleration, and jerk curves that satisfied design constraints
+    such as dwell periods, finite jerk, and pressure angle limits.
+  </p>
+
+  <p className="text-neutral-300 mb-4">
+    I contributed heavily to the <strong>3D CAD modeling</strong>,
+    assemblies, and motion analysis in SolidWorks, as well as documentation of
+    design description, results, and conclusions:contentReference[oaicite:0]{index=0}.
+    Our final design incorporated <strong>ball bearings</strong>,
+    <strong> springs</strong>, and a <strong>drill-powered cam driver</strong>.
+    The physical prototype successfully traced the target displacement curve
+    and simulated the stepping motion of a foot with less than 10% error.
+  </p>
+
+  {/* Tags */}
+  <div className="mt-4 flex flex-wrap gap-2">
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Dynacam</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">SolidWorks</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">MATLAB</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Mechanism Design</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Physical Prototyping</span>
+  </div>
+</section>
+
 </section>
 <section className="py-16 border-b border-neutral-900">
   <div className="flex items-center gap-4 mb-6">
@@ -234,7 +305,7 @@ export default function App() {
   {/* Pelican case */}
   <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
     <img
-      src={`${import.meta.env.BASE_URL}images/pelican-case.jpg`}
+      src={`${import.meta.env.BASE_URL}images/pelican-case.png`}
       alt="Pelican case CAD model"
       className="h-full w-full object-cover"
       loading="lazy"
