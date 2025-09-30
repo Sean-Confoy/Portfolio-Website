@@ -136,73 +136,85 @@ export default function App() {
 
   <div className="mt-10 space-y-20">
     {/* ================== T.O.M. Makeathon ================== */}
-    <article>
-      <div className="flex items-center gap-4">
-        <img
-          src={`${import.meta.env.BASE_URL}images/tom-logo.png`}
-          alt="Tikkun Olam Makers logo"
-          className="h-12 w-auto"
-          loading="lazy"
-        />
-        <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
-          T.O.M. Makeathon — Assistive Technology
-        </h3>
-      </div>
-
-      {/* Images row — uniform size, smaller */}
-<div className="mt-6 grid gap-4 sm:grid-cols-3">
-  <div className="aspect-[4/3] overflow-hidden rounded-xl">
+<article>
+  <div className="flex items-center gap-4 mb-6">
     <img
-      src={`${import.meta.env.BASE_URL}images/tom-sketch.jpg`}
-      alt="Sketch of Switch backplate"
-      className="h-full w-full object-cover"
+      src={`${import.meta.env.BASE_URL}images/tom-logo.png`} // change to tom-logo.jpeg if needed
+      alt="Tikkun Olam Makers logo"
+      className="h-12 w-auto"
       loading="lazy"
     />
+    <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+      T.O.M. Makeathon — Assistive Technology
+    </h3>
   </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-xl">
-    <img
-      src={`${import.meta.env.BASE_URL}images/tom-team.jpg`}
-      alt="Team group photo"
-      className="h-full w-full object-cover"
-      loading="lazy"
-    />
+
+  {/* Images row — uniform size, smaller */}
+  <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-3">
+    <div className="aspect-[4/3] overflow-hidden rounded-xl">
+      <img
+        src={`${import.meta.env.BASE_URL}images/tom-sketch.jpg`}
+        alt="Sketch of Switch backplate"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div className="aspect-[4/3] overflow-hidden rounded-xl">
+      <img
+        src={`${import.meta.env.BASE_URL}images/tom-team.jpg`}
+        alt="Team group photo"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div className="aspect-[4/3] overflow-hidden rounded-xl">
+      <img
+        src={`${import.meta.env.BASE_URL}images/tom-wheelchair.jpg`}
+        alt="Testing wheelchair mount"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
   </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-xl">
-    <img
-      src={`${import.meta.env.BASE_URL}images/tom-wheelchair.jpg`}
-      alt="Testing wheelchair mount"
-      className="h-full w-full object-cover"
-      loading="lazy"
-    />
+
+  {/* Blurb — match Fusion spacing */}
+  <p className="text-neutral-300 mb-4">
+    The T.O.M. Makeathon is a global organization that sponsors annual events aimed at creating
+    solutions to everyday challenges faced by people with disabilities. Vanderbilt hosts a
+    student-led event each year to build technology for “need-knowers” who apply for aid.
+  </p>
+  <p className="text-neutral-300 mb-4">
+    My team worked with a young girl named <strong>Miyako</strong>, diagnosed with a condition similar
+    to scoliosis and cerebral palsy, to improve her daily tasks and hobbies. We prototyped three
+    solutions: (1) an adapted <strong>sock-aid tool</strong>, (2) a <strong>sun shade</strong>, and
+    (3) a <strong>Nintendo Switch mount</strong> for both her wheelchair and family car.
+  </p>
+  <p className="text-neutral-300 mb-4">
+    I led the Switch-mount effort: adapting a ball-and-socket holder, designing a
+    <strong> custom backplate</strong> for the car seat, and 3D-printing
+    <strong> clamps and collars</strong> for her wheelchair. All devices were delivered as working
+    prototypes, and Miyako’s family was extremely grateful.
+  </p>
+
+  {/* Button — same style as Fusion */}
+  <a
+    href="https://tomglobal.org/about"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-block mt-4 rounded-2xl border border-neutral-800 px-4 py-2 text-sm hover:bg-neutral-900"
+  >
+    Visit Project Website
+  </a>
+
+  {/* Tags — same chip style as Fusion */}
+  <div className="mt-4 flex flex-wrap gap-2">
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Human-Centered Design</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">3D Printing</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">CAD</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Rapid Prototyping</span>
   </div>
-</div>
+</article>
 
-
-      {/* Blurb */}
-      <div className="text-neutral-300 mb-4">
-        <p>
-          The T.O.M. Makeathon is a global organization that sponsors annual events aimed to create solutions to everyday challenges of people with disabilities. Vanderbilt hosts a student-led makeathon each year to build technology for “need-knowers” who apply for aid.
-        </p>
-        <p>
-          My team worked with a young girl named <strong>Miyako</strong>, diagnosed with a disease similar to scoliosis and cerebral palsy, to improve her daily tasks and hobbies. We prototyped three solutions: (1) an adapted <strong>sock-aid tool</strong>, (2) a <strong>sun shade</strong>, and (3) a <strong>Nintendo Switch mount</strong> for both her wheelchair and family car.
-        </p>
-        <p>
-          I led the Switch mount effort: adapting a ball-and-socket holder, designing a <strong>custom backplate</strong> for the car seat, and 3D-printing <strong>clamps and collars</strong> for her wheelchair. The initial sketch (left image) shows the concept. All devices were successfully delivered, and Miyako’s family was extremely grateful.
-        </p>
-      </div>
-
-      {/* Tags */}
-      <div className="mt-4 flex flex-wrap gap-2">
-        {["Human-Centered Design", "3D Printing", "CAD", "Rapid Prototyping"].map((t) => (
-          <span
-            key={t}
-            className="rounded-full border border-neutral-800 px-2 py-0.5 text-xs opacity-80"
-          >
-            {t}
-          </span>
-        ))}
-      </div>
-    </article>
   </div>
 </section>
 <section className="py-16 border-b border-neutral-900">
