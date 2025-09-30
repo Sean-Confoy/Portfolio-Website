@@ -198,6 +198,77 @@ export default function App() {
     </article>
   </div>
 </section>
+<section className="py-16 border-b border-neutral-900">
+  <div className="flex items-center gap-4 mb-6">
+    <img
+      src={`${import.meta.env.BASE_URL}images/fusion-logo.png`}
+      alt="Vanderbilt Fusion logo"
+      className="h-12 w-auto"
+    />
+    <h2 className="text-2xl font-semibold tracking-tight">
+      Vanderbilt Fusion Project — Student Fusion Reactor
+    </h2>
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-6 mb-6">
+    <img
+      src={`${import.meta.env.BASE_URL}images/pelica-case.png`}
+      alt="Pelican case CAD model"
+      className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+    />
+    <img
+      src={`${import.meta.env.BASE_URL}images/board.png`}
+      alt="Control panel CAD model"
+      className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+    />
+    <img
+      src={`${import.meta.env.BASE_URL}images/motor.jpg`}
+      alt="Motorized switch design"
+      className="rounded-2xl border border-neutral-900 object-contain h-64 w-full bg-neutral-950"
+    />
+  </div>
+
+  <p className="text-neutral-300 mb-4">
+    The Vanderbilt Fusion Project is a student-run organization developing a soccer ball-sized 
+    reactor capable of achieving <strong>over 1 million fusion events per second</strong> at temperatures 
+    exceeding 400 million °C. Beyond technical development, the group engages in outreach with 
+    universities and companies, making the platform accessible for scaled-down fusion research.
+  </p>
+
+  <p className="text-neutral-300 mb-4">
+    As a member of the <strong>Controls Team</strong>, I contributed to the design and automation of 
+    reactor subsystems. Early on, I created a detailed CAD model of a Pelican case interior to house 
+    rails and control circuitry, ensuring new components could be integrated without interference.
+  </p>
+
+  <p className="text-neutral-300 mb-4">
+    I also designed a <strong>control panel board</strong> with cutouts for a keyed high-voltage switch, 
+    SCRAM emergency shutdown button, gas-flow toggle, and nine BNC connector ports, dimensioned 
+    to fit reliably within the reactor’s systems.
+  </p>
+
+  <p className="text-neutral-300 mb-4">
+    Finally, I worked on automating the reactor’s manual vacuum knob by designing and testing 
+    motor-driven attachments with increased torque and durability. These iterations brought the 
+    team closer to safely operating the chamber remotely.
+  </p>
+
+  <a
+    href="https://www.vanderbiltfusion.org/"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-block mt-4 rounded-2xl border border-neutral-800 px-4 py-2 text-sm hover:bg-neutral-900"
+  >
+    Visit Project Website
+  </a>
+
+  <div className="mt-4 flex flex-wrap gap-2">
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Fusion Research</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Controls</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">CAD</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Automation</span>
+  </div>
+</section>
 
 
         {/* Experience */}
