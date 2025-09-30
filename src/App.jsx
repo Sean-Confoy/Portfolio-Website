@@ -136,158 +136,150 @@ export default function App() {
 
   <div className="mt-10 space-y-20">
     {/* ================== T.O.M. Makeathon ================== */}
-<article>
-  <div className="flex items-center gap-4 mb-6">
-    <img
-      src={`${import.meta.env.BASE_URL}images/tom-logo.png`} // change to tom-logo.jpeg if needed
-      alt="Tikkun Olam Makers logo"
-      className="h-12 w-auto"
-      loading="lazy"
-    />
-    <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
-      T.O.M. Makeathon — Assistive Technology
-    </h3>
-  </div>
+    <article>
+      <div className="flex items-center gap-4 mb-6">
+        <img
+          src={`${import.meta.env.BASE_URL}images/tom-logo.png`}
+          alt="Tikkun Olam Makers logo"
+          className="h-12 w-auto"
+          loading="lazy"
+        />
+        <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+          T.O.M. Makeathon — Assistive Technology
+        </h3>
+      </div>
 
-  {/* Images row — uniform size, smaller */}
-  <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-3">
-    <div className="aspect-[4/3] overflow-hidden rounded-xl">
-      <img
-        src={`${import.meta.env.BASE_URL}images/tom-sketch.jpg`}
-        alt="Sketch of Switch backplate"
-        className="h-full w-full object-cover"
-        loading="lazy"
-      />
-    </div>
-    <div className="aspect-[4/3] overflow-hidden rounded-xl">
-      <img
-        src={`${import.meta.env.BASE_URL}images/tom-team.jpg`}
-        alt="Team group photo"
-        className="h-full w-full object-cover"
-        loading="lazy"
-      />
-    </div>
-    <div className="aspect-[4/3] overflow-hidden rounded-xl">
-      <img
-        src={`${import.meta.env.BASE_URL}images/tom-wheelchair.jpg`}
-        alt="Testing wheelchair mount"
-        className="h-full w-full object-cover"
-        loading="lazy"
-      />
-    </div>
-  </div>
+      {/* Images row — uniform size, smaller */}
+      <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-3">
+        <div className="aspect-[4/3] overflow-hidden rounded-xl">
+          <img
+            src={`${import.meta.env.BASE_URL}images/tom-sketch.jpg`}
+            alt="Sketch of Switch backplate"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="aspect-[4/3] overflow-hidden rounded-xl">
+          <img
+            src={`${import.meta.env.BASE_URL}images/tom-team.jpg`}
+            alt="Team group photo"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="aspect-[4/3] overflow-hidden rounded-xl">
+          <img
+            src={`${import.meta.env.BASE_URL}images/tom-wheelchair.jpg`}
+            alt="Testing wheelchair mount"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
 
-  {/* Blurb — match Fusion spacing */}
-  <p className="text-neutral-300 mb-4">
-    The T.O.M. Makeathon is a global organization that sponsors annual events aimed at creating
-    solutions to everyday challenges faced by people with disabilities. Vanderbilt hosts a
-    student-led event each year to build technology for “need-knowers” who apply for aid.
-  </p>
-  <p className="text-neutral-300 mb-4">
-    My team worked with a young girl named <strong>Miyako</strong>, diagnosed with a condition similar
-    to scoliosis and cerebral palsy, to improve her daily tasks and hobbies. We prototyped three
-    solutions: (1) an adapted <strong>sock-aid tool</strong>, (2) a <strong>sun shade</strong>, and
-    (3) a <strong>Nintendo Switch mount</strong> for both her wheelchair and family car.
-  </p>
-  <p className="text-neutral-300 mb-4">
-    I led the Switch-mount effort: adapting a ball-and-socket holder, designing a
-    <strong> custom backplate</strong> for the car seat, and 3D-printing
-    <strong> clamps and collars</strong> for her wheelchair. All devices were delivered as working
-    prototypes, and Miyako’s family was extremely grateful.
-  </p>
+      {/* Blurb — match Fusion spacing */}
+      <p className="text-neutral-300 mb-4">
+        The T.O.M. Makeathon is a global organization that sponsors annual events aimed at creating
+        solutions to everyday challenges faced by people with disabilities. Vanderbilt hosts a
+        student-led event each year to build technology for “need-knowers” who apply for aid.
+      </p>
+      <p className="text-neutral-300 mb-4">
+        My team worked with a young girl named <strong>Miyako</strong>, diagnosed with a condition similar
+        to scoliosis and cerebral palsy, to improve her daily tasks and hobbies. We prototyped three
+        solutions: (1) an adapted <strong>sock-aid tool</strong>, (2) a <strong>sun shade</strong>, and
+        (3) a <strong>Nintendo Switch mount</strong> for both her wheelchair and family car.
+      </p>
+      <p className="text-neutral-300 mb-4">
+        I led the Switch-mount effort: adapting a ball-and-socket holder, designing a
+        <strong> custom backplate</strong> for the car seat, and 3D-printing
+        <strong> clamps and collars</strong> for her wheelchair. All devices were delivered as working
+        prototypes, and Miyako’s family was extremely grateful.
+      </p>
 
-  {/* Button — same style as Fusion */}
-  <a
-    href="https://www.vanderbilt.edu/the-wondry/tikkun-olam-makers-2023-makeathon/"
-    target="_blank"
-    rel="noreferrer"
-    className="inline-block mt-4 rounded-2xl border border-neutral-800 px-4 py-2 text-sm hover:bg-neutral-900"
-  >
-    Visit Project Website
-  </a>
+      <a
+        href="https://www.vanderbilt.edu/the-wondry/tikkun-olam-makers-2023-makeathon/"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-block mt-4 rounded-2xl border border-neutral-800 px-4 py-2 text-sm hover:bg-neutral-900"
+      >
+        Visit Project Website
+      </a>
 
-  {/* Tags — same chip style as Fusion */}
-  <div className="mt-4 flex flex-wrap gap-2">
-    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Human-Centered Design</span>
-    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">3D Printing</span>
-    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">CAD</span>
-    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Rapid Prototyping</span>
-  </div>
-</article>
+      <div className="mt-4 flex flex-wrap gap-2">
+        <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Human-Centered Design</span>
+        <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">3D Printing</span>
+        <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">CAD</span>
+        <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Rapid Prototyping</span>
+      </div>
+    </article>
 
-  </div>
-  {/* ================== CAM Project ================== */}
-<section className="py-16 border-b border-neutral-900">
-  <div className="flex items-center gap-4 mb-6">
-    <img
-      src={`${import.meta.env.BASE_URL}images/cam-logo.jpg`}
-      alt="Cam project logo"
-      className="h-12 w-auto"
-    />
-    <h2 className="text-2xl font-semibold tracking-tight">
-      CAM Project — Walking Motion Simulation
-    </h2>
-  </div>
+    {/* ================== CAM Project ================== */}
+    <section className="py-16 border-b border-neutral-900">
+      <div className="flex items-center gap-4 mb-6">
+        <img
+          src={`${import.meta.env.BASE_URL}images/cam-logo.jpg`}
+          alt="Cam project logo"
+          className="h-12 w-auto"
+        />
+        <h2 className="text-2xl font-semibold tracking-tight">
+          CAM Project — Walking Motion Simulation
+        </h2>
+      </div>
 
-  {/* Image grid */}
-  <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
-      <img
-        src={`${import.meta.env.BASE_URL}images/cam-assembly.jpg`}
-        alt="CAM assembly rendering"
-        className="h-full w-full object-cover"
-        loading="lazy"
-      />
-    </div>
-    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
-      <img
-        src={`${import.meta.env.BASE_URL}images/follower-motion.jpg`}
-        alt="Follower motion graph"
-        className="h-full w-full object-cover"
-        loading="lazy"
-      />
-    </div>
-    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
-      <img
-        src={`${import.meta.env.BASE_URL}images/cam-physical-model.jpg`}
-        alt="Physical cam model"
-        className="h-full w-full object-cover"
-        loading="lazy"
-      />
-    </div>
-  </div>
+      {/* Image grid */}
+      <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+          <img
+            src={`${import.meta.env.BASE_URL}images/cam-assembly.jpg`}
+            alt="CAM assembly rendering"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+          <img
+            src={`${import.meta.env.BASE_URL}images/follower-motion.jpg`}
+            alt="Follower motion graph"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+          <img
+            src={`${import.meta.env.BASE_URL}images/cam-physical-model.jpg`}
+            alt="Physical cam model"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
 
-  {/* Blurb */}
-  <p className="text-neutral-300 mb-4">
-    This project focused on designing and prototyping a <strong>cam–follower
-    system</strong> to replicate the force a human foot applies to the ground
-    during walking. Using <strong>Dynacam</strong>, <strong>MATLAB</strong>, and
-    <strong> SolidWorks</strong>, the team derived smooth displacement,
-    velocity, acceleration, and jerk curves that satisfied design constraints
-    such as dwell periods, finite jerk, and pressure angle limits.
-  </p>
+      <p className="text-neutral-300 mb-4">
+        This project focused on designing and prototyping a <strong>cam–follower system</strong> to replicate
+        the force a human foot applies to the ground during walking. Using <strong>Dynacam</strong>,
+        <strong> MATLAB</strong>, and <strong>SolidWorks</strong>, we derived smooth displacement, velocity,
+        acceleration, and jerk curves that satisfied dwell, finite-jerk, and pressure-angle constraints.
+      </p>
 
-  <p className="text-neutral-300 mb-4">
-    I contributed heavily to the <strong>3D CAD modeling</strong>,
-    assemblies, and motion analysis in SolidWorks, as well as documentation of
-    design description, results, and conclusions:contentReference[oaicite:0]{index=0}.
-    Our final design incorporated <strong>ball bearings</strong>,
-    <strong> springs</strong>, and a <strong>drill-powered cam driver</strong>.
-    The physical prototype successfully traced the target displacement curve
-    and simulated the stepping motion of a foot with less than 10% error.
-  </p>
+      <p className="text-neutral-300 mb-4">
+        I contributed to <strong>3D CAD modeling</strong>, assemblies, and motion analysis, as well as the final
+        documentation. The prototype incorporated <strong>ball bearings</strong>, <strong>springs</strong>, and a
+        <strong> drill-powered cam driver</strong>, and it traced the target displacement curve closely while
+        simulating foot-stepping motion.
+      </p>
 
-  {/* Tags */}
-  <div className="mt-4 flex flex-wrap gap-2">
-    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Dynacam</span>
-    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">SolidWorks</span>
-    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">MATLAB</span>
-    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Mechanism Design</span>
-    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Physical Prototyping</span>
+      <div className="mt-4 flex flex-wrap gap-2">
+        <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Dynacam</span>
+        <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">SolidWorks</span>
+        <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">MATLAB</span>
+        <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Mechanism Design</span>
+        <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Physical Prototyping</span>
+      </div>
+    </section>
   </div>
 </section>
 
-</section>
+{/* ================== Fusion Project ================== */}
 <section className="py-16 border-b border-neutral-900">
   <div className="flex items-center gap-4 mb-6">
     <img
@@ -301,61 +293,52 @@ export default function App() {
   </div>
 
   {/* Image grid — clean, aligned, no borders */}
-<div className="mt-6 mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-  {/* Pelican case */}
-  <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
-    <img
-      src={`${import.meta.env.BASE_URL}images/pelican-case.png`}
-      alt="Pelican case CAD model"
-      className="h-full w-full object-cover"
-      loading="lazy"
-    />
+  <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+      <img
+        src={`${import.meta.env.BASE_URL}images/pelican-case.png`}
+        alt="Pelican case CAD model"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+      <img
+        src={`${import.meta.env.BASE_URL}images/board.png`}
+        alt="Control panel CAD model"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+      <img
+        src={`${import.meta.env.BASE_URL}images/motor.jpg`}
+        alt="Motorized switch concept"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
   </div>
-
-  {/* Control panel board */}
-  <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
-    <img
-      src={`${import.meta.env.BASE_URL}images/board.png`}
-      alt="Control panel CAD model"
-      className="h-full w-full object-cover"
-      loading="lazy"
-    />
-  </div>
-
-  {/* Motorized knob */}
-  <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
-    <img
-      src={`${import.meta.env.BASE_URL}images/motor.jpg`}
-      alt="Motorized switch concept"
-      className="h-full w-full object-cover"
-      loading="lazy"
-    />
-  </div>
-</div>
-
 
   <p className="text-neutral-300 mb-4">
-    The Vanderbilt Fusion Project is a student-run organization developing a soccer ball-sized 
-    reactor capable of achieving <strong>over 1 million fusion events per second</strong> at temperatures 
-    exceeding 400 million °C. Beyond technical development, the group engages in outreach with 
+    The Vanderbilt Fusion Project is a student-run organization developing a soccer ball-sized
+    reactor capable of achieving <strong>over 1 million fusion events per second</strong> at temperatures
+    exceeding 400 million °C. Beyond technical development, the group engages in outreach with
     universities and companies, making the platform accessible for scaled-down fusion research.
   </p>
-
   <p className="text-neutral-300 mb-4">
-    As a member of the <strong>Controls Team</strong>, I contributed to the design and automation of 
-    reactor subsystems. Early on, I created a detailed CAD model of a Pelican case interior to house 
+    As a member of the <strong>Controls Team</strong>, I contributed to the design and automation of
+    reactor subsystems. Early on, I created a detailed CAD model of a Pelican case interior to house
     rails and control circuitry, ensuring new components could be integrated without interference.
   </p>
-
   <p className="text-neutral-300 mb-4">
-    I also designed a <strong>control panel board</strong> with cutouts for a keyed high-voltage switch, 
-    SCRAM emergency shutdown button, gas-flow toggle, and nine BNC connector ports, dimensioned 
+    I also designed a <strong>control panel board</strong> with cutouts for a keyed high-voltage switch,
+    SCRAM emergency shutdown button, gas-flow toggle, and nine BNC connector ports, dimensioned
     to fit reliably within the reactor’s systems.
   </p>
-
   <p className="text-neutral-300 mb-4">
-    Finally, I worked on automating the reactor’s manual vacuum knob by designing and testing 
-    motor-driven attachments with increased torque and durability. These iterations brought the 
+    Finally, I worked on automating the reactor’s manual vacuum knob by designing and testing
+    motor-driven attachments with increased torque and durability. These iterations brought the
     team closer to safely operating the chamber remotely.
   </p>
 
@@ -375,6 +358,7 @@ export default function App() {
     <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Automation</span>
   </div>
 </section>
+
 
 
         {/* Experience */}
