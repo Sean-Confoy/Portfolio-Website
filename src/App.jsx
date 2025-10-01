@@ -217,7 +217,7 @@ export default function App() {
     <section className="py-16 border-b border-neutral-900">
       <div className="flex items-center gap-4 mb-6">
         <img
-          src={`${import.meta.env.BASE_URL}images/cam-logo.jpg`}
+          src={`${import.meta.env.BASE_URL}images/cam-logo.png`}
           alt="Cam project logo"
           className="h-12 w-auto"
         />
