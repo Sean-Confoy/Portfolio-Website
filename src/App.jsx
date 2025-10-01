@@ -130,7 +130,7 @@ export default function App() {
 
 
        {/* Projects */}
-<section id="projects" className="py-12 md:py-20">
+<section id="projects" className="pt-4 pb-12 md:pt-8 md:pb-20">
   <h2 className="text-2xl md:text-3xl font-semibold">Projects</h2>
   <p className="text-sm opacity-70">Selected work and case studies</p>
 
@@ -147,11 +147,11 @@ export default function App() {
   <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
       <img
-        src={`${import.meta.env.BASE_URL}images/assembly-shovel.png`}
-        alt="Retractable shovel CAD assembly"
-        className="h-full w-full object-cover"
-        loading="lazy"
-      />
+  src={`${import.meta.env.BASE_URL}images/assembly-shovel.png`}
+  alt="Retractable shovel CAD assembly"
+  className="h-full w-full object-contain bg-neutral-950"
+  loading="lazy"
+/>
     </div>
     <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
       <img
