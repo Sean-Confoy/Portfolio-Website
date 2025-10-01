@@ -135,6 +135,75 @@ export default function App() {
   <p className="text-sm opacity-70">Selected work and case studies</p>
 
   <div className="mt-10 space-y-20">
+    {/* ================== VADL — Retractable Shovel Payload ================== */}
+<section className="py-16 border-b border-neutral-900">
+  <div className="flex items-center gap-4 mb-6">
+    <h2 className="text-2xl font-semibold tracking-tight">
+      Vanderbilt Aerospace Design Lab (VADL) — Retractable Shovel Payload
+    </h2>
+  </div>
+
+  {/* Image grid — aligned, no borders */}
+  <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+      <img
+        src={`${import.meta.env.BASE_URL}images/assembly-shovel.png`}
+        alt="Retractable shovel CAD assembly"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+      <img
+        src={`${import.meta.env.BASE_URL}images/gear-train.png`}
+        alt="Gear-train concept for opening mechanism"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
+      <img
+        src={`${import.meta.env.BASE_URL}images/physical-assembly.jpg`}
+        alt="Physical payload assembly on bench"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+  {/* Blurb */}
+  <p className="text-neutral-300 mb-4">
+    As <strong>Lead Payload Engineer</strong> on VADL, I own the mechanisms for a soil-collection
+    payload that deploys, digs, and retracts on our competition rocket. The system is designed
+    for reliability under mass/volume constraints, high-g launch loads, and vibration.
+  </p>
+
+  <p className="text-neutral-300 mb-4">
+    I recently designed a new <strong>opening mechanism</strong> based on a compact
+    <strong> gear train</strong>: a high-RPM motor drives a small pinion, stepping through staged
+    reductions to a <strong>sector gear</strong> that rotates the shovel via a connecting shaft. The
+    train provides the required torque multiplication while keeping the actuator packageable
+    around the payload bay.
+  </p>
+
+  <p className="text-neutral-300 mb-4">
+    The design was modeled in <strong>SolidWorks</strong>, iterated with quick prints and laser-cut
+    plates, and assembled with standard hardware and bushings. Bench tests demonstrated
+    repeatable deployment and retraction; integration with avionics for commanded actuation is
+    in progress.
+  </p>
+
+  {/* Tags */}
+  <div className="mt-4 flex flex-wrap gap-2">
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Aerospace</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Mechanism Design</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Gear Train</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">SolidWorks</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Rapid Prototyping</span>
+    <span className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs">Testing</span>
+  </div>
+</section>
+
     {/* ================== T.O.M. Makeathon ================== */}
     <article>
       <div className="flex items-center gap-4 mb-6">
