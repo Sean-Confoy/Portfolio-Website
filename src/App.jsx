@@ -147,9 +147,9 @@ export default function App() {
   <div className="mt-6 mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-900/10">
       <img
-  src={`${import.meta.env.BASE_URL}images/assembly-shovel.png`}
+  src={`${import.meta.env.BASE_URL}images/shovel-extension.jpg`}
   alt="Retractable shovel CAD assembly"
-  className="h-full w-full object-contain bg-neutral-950"
+  className="h-full w-full object-cover"
   loading="lazy"
 />
     </div>
