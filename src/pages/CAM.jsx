@@ -38,29 +38,29 @@ export default function CAM() {
       </header>
 
       {/* Top image gallery */}
-      <section className="mt-8">
-        <div className="grid gap-6 sm:grid-cols-3">
-          {[
-            "cam-physical-model.jpg",
-            "cam-assembly.jpg",
-            "follower-motion.jpg",
-          ].map((f, idx) => (
-            <div
-              key={f}
-              className={`overflow-hidden bg-neutral-900/10 ${
-                idx === 1 ? "aspect-[5/3]" : "aspect-[4/3]"
-              }`}
-            >
-              <img
-                src={`${base}images/${f}`}
-                alt=""
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))}
+<section className="mt-8">
+  <div className="grid gap-6 sm:grid-cols-3">
+    {["cam-physical-model.jpg", "cam-assembly.jpg", "follower-motion.jpg"].map(
+      (f, idx) => (
+        <div
+          key={f}
+          className={
+            "overflow-hidden bg-neutral-900/10 rounded-2xl " +
+            (idx === 1 ? "aspect-[5/3]" : "aspect-[4/3]")
+          }
+        >
+          <img
+            src={`${base}images/${f}`}
+            alt=""
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
         </div>
-      </section>
+      )
+    )}
+  </div>
+</section>
+
 
       {/* Longer write-up */}
       <section className="mt-10 space-y-4 text-neutral-300 leading-relaxed">
