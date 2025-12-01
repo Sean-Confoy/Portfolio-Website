@@ -1,3 +1,4 @@
+// src/pages/CAM.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -8,7 +9,6 @@ export default function CAM() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
-
       {/* Back link */}
       <Link to="/#projects" className="text-sm opacity-70 hover:opacity-100">
         ← Back to Projects
@@ -19,8 +19,6 @@ export default function CAM() {
         <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
           CAM Project — Walking Motion Simulation
         </h1>
-
-        {/* Tags */}
         <div className="flex flex-wrap gap-2">
           {[
             "Dynacam",
@@ -39,7 +37,7 @@ export default function CAM() {
         </div>
       </header>
 
-      {/* ---------------- TOP IMAGE GALLERY ---------------- */}
+      {/* Top image gallery */}
       <section className="mt-8">
         <div className="grid gap-6 sm:grid-cols-3">
           {[
@@ -50,9 +48,7 @@ export default function CAM() {
             <div
               key={f}
               className={`overflow-hidden bg-neutral-900/10 ${
-                idx === 1
-                  ? "aspect-[5/3]" // slightly wider for the CAD BOM image
-                  : "aspect-[4/3]"
+                idx === 1 ? "aspect-[5/3]" : "aspect-[4/3]"
               }`}
             >
               <img
@@ -66,48 +62,45 @@ export default function CAM() {
         </div>
       </section>
 
-      {/* ---------------- LONGER PROJECT WRITE-UP ---------------- */}
+      {/* Longer write-up */}
       <section className="mt-10 space-y-4 text-neutral-300 leading-relaxed">
-
         <p>
           This project focused on designing and building a{" "}
-          <strong>cam–follower mechanism</strong> capable of replicating
-          the vertical force profile of a human step. The cam profile was
-          generated in <strong>Dynacam</strong> to produce smooth displacement,
-          velocity, acceleration, and jerk curves that closely matched the
-          biomechanics of walking.
+          <strong>cam–follower mechanism</strong> capable of replicating the
+          vertical force profile of a human step. The cam profile was generated
+          in <strong>Dynacam</strong> to produce smooth displacement, velocity,
+          acceleration, and jerk curves that closely matched the biomechanics of
+          walking.
         </p>
-
         <p>
           To validate the theoretical cam profile, I used{" "}
-          <strong>MATLAB</strong> to run numerical checks ensuring the motion
+          <strong>MATLAB</strong> to run numerical checks and ensure the motion
           curve translated into realistic stepping dynamics. The geometry was
-          then modeled and assembled in <strong>SolidWorks</strong>, with
-          careful attention to alignment of the cam, follower, and spring-loaded
+          then modeled and assembled in <strong>SolidWorks</strong>, with close
+          attention to alignment of the cam, follower, and spring-loaded
           elements.
         </p>
-
         <p>
           A prototype was constructed with accessible materials:{" "}
           <strong>ball bearings</strong> for smooth follower travel,{" "}
-          <strong>springs</strong> to create resistive force, and a drill-powered
-          cam driver for simple actuation. During testing, the follower motion
-          closely traced the desired path and produced a step-like ground
-          contact force profile.
+          <strong>springs</strong> to create resistive force, and a
+          drill-powered cam driver for simple actuation. During testing, the
+          follower motion closely traced the desired path and produced a
+          step-like ground contact force profile.
         </p>
-
         <p>
-          This project highlighted the importance of linking theoretical motion
-          design with hands-on prototyping — showing how a simulated cam profile
-          can be validated with real hardware. It strengthened my skills in CAD,
+          The project highlighted how theoretical motion design and hands-on
+          prototyping feed into each other. It strengthened my skills in CAD,
           mechanism synthesis, data validation, and iterative testing while
           demonstrating a functional representation of biomechanical motion.
         </p>
       </section>
 
-      {/* ---------------- INTERACTIVE AUTODESK VIEWER ---------------- */}
+      {/* Interactive viewer */}
       <section className="mt-12">
-        <h2 className="font-medium tracking-tight">Interactive Assembly (small viewer)</h2>
+        <h2 className="font-medium tracking-tight">
+          Interactive Assembly (small viewer)
+        </h2>
         <p className="mt-1 text-neutral-400 text-sm">
           Drag to orbit, scroll to zoom, right-drag to pan.
         </p>
