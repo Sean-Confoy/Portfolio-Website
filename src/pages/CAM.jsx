@@ -1,133 +1,143 @@
-// src/pages/CAM.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function CAM() {
   const base = import.meta.env.BASE_URL;
-  const FUSION_EMBED =
-    "https://vanderbilt819.autodesk360.com/shares/public/SH90d2dQT28d5b60281194afa67d1e0644a2?mode=embed";
+
+  const images = [
+    { src: "cam-physical-model.jpg", caption: "Physical cam-follower prototype" },
+    { src: "cam-assembly.jpg", caption: "Assembly CAD model" },
+    { src: "follower-motion.jpg", caption: "Follower motion analysis" },
+  ];
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
-      {/* Back link */}
-      <Link to="/#projects" className="text-sm opacity-70 hover:opacity-100">
-        ← Back to Projects
+    <div className="max-w-4xl mx-auto px-6 py-12">
+      {/* Back Link */}
+      <Link
+        to="/"
+        className="inline-flex items-center gap-2 text-sm text-[var(--color-muted)] hover:text-sky-400 transition-colors mb-8"
+      >
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+        Back to Projects
       </Link>
 
       {/* Header */}
-      <header className="mt-2 flex flex-col gap-2">
-        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
-          CAM Project — Walking Motion Simulation
-        </h1>
-        <div className="flex flex-wrap gap-2">
-          {[
-            "Dynacam",
-            "SolidWorks",
-            "MATLAB",
-            "Mechanism Design",
-            "Physical Prototyping",
-          ].map((t) => (
-            <span
-              key={t}
-              className="rounded-2xl bg-neutral-900 px-3 py-1 text-xs"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      </header>
-
-      {/* Top image gallery */}
-<section className="mt-8">
-  <div className="grid gap-6 sm:grid-cols-3">
-    {["cam-physical-model.jpg", "cam-assembly.jpg", "follower-motion.jpg"].map(
-      (f, idx) => (
-        <div
-          key={f}
-          className={
-            "overflow-hidden bg-neutral-900/10 rounded-2xl " +
-            (idx === 1 ? "aspect-[5/3]" : "aspect-[4/3]")
-          }
-        >
+      <motion.header
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-10"
+      >
+        <div className="flex items-center gap-4 mb-4">
           <img
-            src={`${base}images/${f}`}
-            alt=""
-            className="h-full w-full object-cover"
-            loading="lazy"
+            src={`${base}images/cam-logo.png`}
+            alt="CAM Logo"
+            className="h-12 w-auto"
           />
-        </div>
-      )
-    )}
-  </div>
-</section>
-
-
-      {/* Longer write-up */}
-      <section className="mt-10 space-y-4 text-neutral-300 leading-relaxed">
-        <p>
-          This project focused on designing and building a{" "}
-          <strong>cam–follower mechanism</strong> capable of replicating the
-          vertical force profile of a human step. The cam profile was generated
-          in <strong>Dynacam</strong> to produce smooth displacement, velocity,
-          acceleration, and jerk curves that closely matched the biomechanics of
-          walking.
-        </p>
-        <p>
-          To validate the theoretical cam profile, I used{" "}
-          <strong>MATLAB</strong> to run numerical checks and ensure the motion
-          curve translated into realistic stepping dynamics. The geometry was
-          then modeled and assembled in <strong>SolidWorks</strong>, with close
-          attention to alignment of the cam, follower, and spring-loaded
-          elements.
-        </p>
-        <p>
-          A prototype was constructed with accessible materials:{" "}
-          <strong>ball bearings</strong> for smooth follower travel,{" "}
-          <strong>springs</strong> to create resistive force, and a
-          drill-powered cam driver for simple actuation. During testing, the
-          follower motion closely traced the desired path and produced a
-          step-like ground contact force profile.
-        </p>
-        <p>
-          The project highlighted how theoretical motion design and hands-on
-          prototyping feed into each other. It strengthened my skills in CAD,
-          mechanism synthesis, data validation, and iterative testing while
-          demonstrating a functional representation of biomechanical motion.
-        </p>
-      </section>
-
-      {/* Interactive viewer */}
-      <section className="mt-12">
-        <h2 className="font-medium tracking-tight">
-          Interactive Assembly (small viewer)
-        </h2>
-        <p className="mt-1 text-neutral-400 text-sm">
-          Drag to orbit, scroll to zoom, right-drag to pan.
-        </p>
-
-        <div className="mt-4 flex justify-center">
-          <div className="w-full max-w-3xl aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-900">
-            <iframe
-              src={FUSION_EMBED}
-              title="CAM Assembly Viewer"
-              className="h-full w-full"
-              frameBorder="0"
-              allowFullScreen
-            />
+          <div className="flex flex-wrap gap-2">
+            {["Dynacam", "MATLAB", "Motion Analysis", "Prototyping"].map((tag) => (
+              <span
+                key={tag}
+                className="text-xs px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
+        <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          CAM Project — Walking Simulation
+        </h1>
+        <p className="text-lg text-[var(--color-muted)]">
+          Mechanical Design | Cam-Follower Mechanism
+        </p>
+      </motion.header>
 
-        <div className="mt-3 text-center">
-          <a
-            href={FUSION_EMBED}
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm opacity-80 hover:opacity-100 underline"
-          >
-            Open full-size viewer in a new tab
-          </a>
+      {/* Image Gallery */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="mb-12"
+      >
+        <div className="grid gap-4 sm:grid-cols-3">
+          {images.map((img) => (
+            <div key={img.src} className="group">
+              <div className="aspect-[4/3] overflow-hidden rounded-xl bg-[var(--color-slate)] border border-white/5">
+                <img
+                  src={`${base}images/${img.src}`}
+                  alt={img.caption}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <p className="mt-2 text-xs text-[var(--color-muted)] text-center">{img.caption}</p>
+            </div>
+          ))}
         </div>
-      </section>
-    </main>
+      </motion.section>
+
+      {/* Content */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="space-y-6 text-[var(--color-light)]"
+      >
+        <p className="text-lg leading-relaxed">
+          This project involved designing and building a <span className="text-sky-400 font-medium">cam-follower 
+          mechanism</span> that simulates the vertical displacement of a human footstep during walking.
+        </p>
+
+        <p className="leading-relaxed text-[var(--color-muted)]">
+          Using <span className="text-white">Dynacam</span> software and <span className="text-white">MATLAB</span>, 
+          I developed motion curves that accurately replicate the rise-dwell-fall pattern of a foot during the 
+          gait cycle. The cam profile was optimized to produce smooth acceleration profiles while minimizing 
+          jerk and pressure angle constraints.
+        </p>
+
+        <p className="leading-relaxed text-[var(--color-muted)]">
+          The physical prototype demonstrates how the cam's rotation translates into precise vertical motion 
+          of the follower. The design accounts for <span className="text-white">contact stress</span>, 
+          <span className="text-white"> follower dynamics</span>, and <span className="text-white">manufacturing 
+          tolerances</span> to ensure reliable operation.
+        </p>
+
+        <p className="leading-relaxed text-[var(--color-muted)]">
+          Key challenges included balancing the desired motion profile against practical constraints like 
+          maximum pressure angle, cam size limitations, and follower spring requirements. The final design 
+          successfully achieves the target motion characteristics while remaining manufacturable.
+        </p>
+
+        {/* Technical Specs */}
+        <div className="mt-8 p-6 rounded-xl bg-[var(--color-charcoal)] border border-white/5">
+          <h3 className="font-semibold text-white mb-4 flex items-center gap-2">
+            <svg className="w-5 h-5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            Technical Approach
+          </h3>
+          <ul className="space-y-2 text-[var(--color-muted)]">
+            <li className="flex items-start gap-2">
+              <span className="text-sky-400 mt-1">•</span>
+              Dynacam for cam profile generation and analysis
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-sky-400 mt-1">•</span>
+              MATLAB for motion curve optimization
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-sky-400 mt-1">•</span>
+              SolidWorks for 3D modeling and assembly
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-sky-400 mt-1">•</span>
+              Physical prototype validates theoretical motion curves
+            </li>
+          </ul>
+        </div>
+      </motion.section>
+    </div>
   );
 }
