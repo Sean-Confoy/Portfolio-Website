@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 export default function VADL() {
   const base = import.meta.env.BASE_URL;
@@ -27,11 +26,7 @@ export default function VADL() {
       </Link>
 
       {/* Header */}
-      <motion.header
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-10"
-      >
+      <header className="mb-10">
         <div className="flex flex-wrap items-center gap-3 mb-4">
           {["Lead Payload Engineer", "Mechanism Design", "Gear Train", "SolidWorks", "Rapid Prototyping"].map((tag) => (
             <span
@@ -48,15 +43,10 @@ export default function VADL() {
         <p className="text-lg text-[var(--color-muted)]">
           Vanderbilt Aerospace Design Lab | NASA Student Launch Competition
         </p>
-      </motion.header>
+      </header>
 
       {/* Image Gallery */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="mb-12"
-      >
+      <section className="mb-12">
         <div className="grid gap-4 sm:grid-cols-3">
           {images.map((img, i) => (
             <div key={img.src} className="group">
@@ -71,15 +61,10 @@ export default function VADL() {
             </div>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* Content */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="space-y-6 text-[var(--color-light)]"
-      >
+      <section className="space-y-6 text-[var(--color-light)]">
         <p className="text-lg leading-relaxed">
           As <span className="text-amber-400 font-medium">Lead Payload Engineer</span>, I am 
           responsible for designing the soil-collection mechanism that passively deploys, digs, 
@@ -159,15 +144,10 @@ export default function VADL() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
         </a>
-      </motion.section>
+      </section>
 
       {/* 3D Viewer */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        className="mt-12"
-      >
+      <section className="mt-12">
         <h2 className="text-xl font-semibold text-white mb-2">Interactive Assembly</h2>
         <p className="text-sm text-[var(--color-muted)] mb-4">
           Drag to orbit, scroll to zoom, right-drag to pan
@@ -190,7 +170,7 @@ export default function VADL() {
             Open full-size viewer →
           </a>
         </div>
-      </motion.section>
+      </section>
     </div>
   );
 }

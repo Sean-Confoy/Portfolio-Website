@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -63,12 +62,7 @@ export default function Home() {
       {/* Hero Section */}
       <section id="about" className="grid lg:grid-cols-3 gap-12 items-start mb-24">
         {/* Left - Photo & Info */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.1 }}
-          className="lg:col-span-1"
-        >
+        <div className="lg:col-span-1">
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl blur-xl" />
             <img
@@ -130,15 +124,10 @@ export default function Home() {
               Download Résumé
             </a>
           </div>
-        </motion.div>
+        </div>
 
         {/* Right - Bio */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2 }}
-          className="lg:col-span-2 space-y-6"
-        >
+        <div className="lg:col-span-2 space-y-6">
           <div className="prose prose-invert max-w-none">
             <p className="text-lg text-[var(--color-light)] leading-relaxed">
               I'm a Mechanical Engineering student at Vanderbilt University, passionate about 
@@ -182,29 +171,20 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Projects Section */}
       <section id="projects">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
+        <div>
           <h2 className="text-2xl font-bold text-white mb-2">Featured Projects</h2>
           <p className="text-[var(--color-muted)] mb-8">
             A selection of engineering work from research, competitions, and coursework.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.slug}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
-              >
+            {projects.map((project) => (
+              <div key={project.slug}>
                 <Link
                   to={`/projects/${project.slug}`}
                   className={`group block h-full p-1 rounded-2xl bg-gradient-to-br ${accentColors[project.accent]} border transition-all duration-300`}
@@ -260,10 +240,10 @@ export default function Home() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
     </div>
   );

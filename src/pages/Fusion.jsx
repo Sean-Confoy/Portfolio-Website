@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 export default function Fusion() {
   const base = import.meta.env.BASE_URL;
@@ -25,11 +24,7 @@ export default function Fusion() {
       </Link>
 
       {/* Header */}
-      <motion.header
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-10"
-      >
+      <header className="mb-10">
         <div className="flex items-center gap-4 mb-4">
           <img
             src={`${base}images/fusion-logo.png`}
@@ -53,15 +48,10 @@ export default function Fusion() {
         <p className="text-lg text-[var(--color-muted)]">
           Inertial Electrostatic Confinement Fusion Reactor
         </p>
-      </motion.header>
+      </header>
 
       {/* Image Gallery */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="mb-12"
-      >
+      <section className="mb-12">
         <div className="grid gap-4 sm:grid-cols-3">
           {images.map((img) => (
             <div key={img.src} className="group">
@@ -76,15 +66,10 @@ export default function Fusion() {
             </div>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* Content */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="space-y-6 text-[var(--color-light)]"
-      >
+      <section className="space-y-6 text-[var(--color-light)]">
         <p className="text-lg leading-relaxed">
           I contributed to the controls and mechanical systems for a student-built 
           <span className="text-violet-400 font-medium"> inertial electrostatic confinement (IEC) fusion reactor</span>.
@@ -137,7 +122,7 @@ export default function Fusion() {
             </li>
           </ul>
         </div>
-      </motion.section>
+      </section>
     </div>
   );
 }

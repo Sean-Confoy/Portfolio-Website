@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 export default function TOM() {
   const base = import.meta.env.BASE_URL;
@@ -25,11 +24,7 @@ export default function TOM() {
       </Link>
 
       {/* Header */}
-      <motion.header
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-10"
-      >
+      <header className="mb-10">
         <div className="flex items-center gap-4 mb-4">
           <img
             src={`${base}images/tom-logo.png`}
@@ -53,15 +48,10 @@ export default function TOM() {
         <p className="text-lg text-[var(--color-muted)]">
           Tikkun Olam Makers | 48-Hour Design Sprint
         </p>
-      </motion.header>
+      </header>
 
       {/* Image Gallery */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="mb-12"
-      >
+      <section className="mb-12">
         <div className="grid gap-4 sm:grid-cols-3">
           {images.map((img) => (
             <div key={img.src} className="group">
@@ -76,15 +66,10 @@ export default function TOM() {
             </div>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* Content */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="space-y-6 text-[var(--color-light)]"
-      >
+      <section className="space-y-6 text-[var(--color-light)]">
         <p className="text-lg leading-relaxed">
           The Vanderbilt <span className="text-emerald-400 font-medium">Tikkun Olam Makers (T.O.M.)</span> Makeathon 
           brings together engineers, designers, and community members to build customized assistive devices for 
@@ -154,7 +139,7 @@ export default function TOM() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
         </a>
-      </motion.section>
+      </section>
     </div>
   );
 }

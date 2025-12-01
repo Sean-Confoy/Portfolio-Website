@@ -1,6 +1,5 @@
 import React from "react";
 import { HashRouter, Routes, Route, Link, Outlet, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
 
 import Home from "./pages/Home";
 import VADL from "./pages/VADL";
@@ -63,18 +62,9 @@ function Layout() {
       </header>
 
       {/* Main content */}
-      <AnimatePresence mode="wait">
-        <motion.main
-          key={location.pathname}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-          className="relative z-10"
-        >
-          <Outlet />
-        </motion.main>
-      </AnimatePresence>
+      <main className="relative z-10">
+        <Outlet />
+      </main>
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/5 mt-24">
