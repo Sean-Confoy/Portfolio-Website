@@ -11,85 +11,50 @@ function Layout() {
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "";
 
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-[var(--color-midnight)]">
-      {/* Gradient background effect */}
-      <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl" />
-      </div>
-
+    <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
       {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-[var(--color-midnight)]/80 border-b border-white/5">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)]/90 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link 
-            to="/" 
-            className="group flex items-center gap-3"
-          >
-            <span className="text-lg font-semibold tracking-tight text-white group-hover:text-amber-400 transition-colors">
-              Sean Confoy
-            </span>
-            <span className="hidden sm:inline text-xs font-mono text-[var(--color-muted)] bg-[var(--color-slate)] px-2 py-0.5 rounded">
-              ME @ Vanderbilt
-            </span>
+          <Link to="/" className="text-lg font-semibold">
+            Sean Confoy
           </Link>
-
-          <nav className="flex items-center gap-6">
-            {isHome && (
+          <nav className="hidden md:flex items-center gap-8 text-sm">
+            {isHome ? (
               <>
-                <a 
-                  href="#about" 
-                  className="text-sm text-[var(--color-muted)] hover:text-white transition-colors"
-                >
+                <button onClick={() => scrollTo('home')} className="text-[var(--color-muted)] hover:text-white transition-colors">
+                  Home
+                </button>
+                <button onClick={() => scrollTo('about')} className="text-[var(--color-muted)] hover:text-white transition-colors">
                   About
-                </a>
-                <a 
-                  href="#projects" 
-                  className="text-sm text-[var(--color-muted)] hover:text-white transition-colors"
-                >
+                </button>
+                <button onClick={() => scrollTo('projects')} className="text-[var(--color-muted)] hover:text-white transition-colors">
                   Projects
-                </a>
+                </button>
+                <button onClick={() => scrollTo('contact')} className="text-[var(--color-muted)] hover:text-white transition-colors">
+                  Contact
+                </button>
               </>
+            ) : (
+              <Link to="/" className="text-[var(--color-muted)] hover:text-white transition-colors">
+                Home
+              </Link>
             )}
-            <a
-              href="mailto:seanconfoy@gmail.com"
-              className="text-sm px-4 py-2 bg-amber-500/10 text-amber-400 rounded-full hover:bg-amber-500/20 transition-all border border-amber-500/20"
-            >
-              Contact
-            </a>
           </nav>
         </div>
       </header>
 
       {/* Main content */}
-      <main className="relative z-10">
+      <main className="pt-16">
         <Outlet />
       </main>
-
-      {/* Footer */}
-      <footer className="relative z-10 border-t border-white/5 mt-24">
-        <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-[var(--color-muted)]">
-            © {new Date().getFullYear()} Sean Confoy
-          </p>
-          <div className="flex items-center gap-6">
-            <a
-              href="https://www.linkedin.com/in/sean-confoy/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm text-[var(--color-muted)] hover:text-amber-400 transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="mailto:seanconfoy@gmail.com"
-              className="text-sm text-[var(--color-muted)] hover:text-amber-400 transition-colors"
-            >
-              Email
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
