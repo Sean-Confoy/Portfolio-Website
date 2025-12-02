@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function VADL() {
   const base = import.meta.env.BASE_URL;
   const FUSION_EMBED =
-    "https://vanderbilt819.autodesk360.com/shares/public/SH90d2dQT28d5b602811501690b90a95d5a2?mode=embed";
+    "https://vanderbilt819.autodesk360.com/shares/public/SH90d2dQT28d5b602811a54062f9a72a383c?mode=embed";
 
   const images = [
     { src: "newgearbox.jpg", caption: "New ~100:1 gear reducer + sprocket system" },
