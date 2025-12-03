@@ -80,13 +80,21 @@ export default function Home() {
               <p className="text-sm text-[var(--color-muted)] mb-6">
                 Nashville, TN
               </p>
+              <p className="text-[var(--color-muted)] leading-relaxed mb-4 max-w-xl">
+                Mechanical engineering student at Vanderbilt University with deep hands-on 
+                experience in complex mechanism design, rapid prototyping, and testing. Serving as 
+                the <span className="text-white font-medium">Lead Payload Engineer</span> for the 
+                Vanderbilt Aerospace Design Lab (VADL), where I'm designing an autonomous 
+                soil-collection payload for NASA's USLI competition—integrating gear reducers, 
+                sprockets, chain drives, and sensor systems to reliably collect and analyze 
+                ~50–100 mL of soil after landing.
+              </p>
               <p className="text-[var(--color-muted)] leading-relaxed mb-8 max-w-xl">
-                Mechanical engineering student at Vanderbilt University with hands-on 
-                experience from VADL rocketry and research projects. Currently serving as 
-                <span className="text-white font-medium"> Lead Payload Engineer</span> for 
-                Vanderbilt's Aerospace Design Lab, where I design mechanisms for NASA-style 
-                student launch competitions. Passionate about turning complex engineering 
-                challenges into elegant, functional solutions.
+                I'm driven by building mechanisms that actually work under real constraints—tight 
+                mass budgets, limited power, unpredictable landing orientations, and rugged field 
+                conditions. Whether it's iterating gearbox designs, running FEA and SolidWorks 
+                assemblies, or troubleshooting chain tensioners at 2 a.m., I enjoy translating 
+                complicated engineering challenges into clean, functional, and manufacturable solutions.
               </p>
 
               {/* Buttons */}
@@ -165,19 +173,37 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            {/* Image */}
-            <div className="flex-shrink-0 w-full md:w-96">
-              <img
-                src={`${base}images/sean-professional-1.jpg`}
-                alt="Sean Confoy"
-                className="w-full aspect-[4/5] object-cover rounded-2xl"
-              />
+          <h2 className="text-3xl font-bold mb-10 text-center">About Me</h2>
+          
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
+            {/* Image Gallery */}
+            <div className="w-full lg:w-1/2">
+              <div className="grid grid-cols-2 gap-3">
+                <img
+                  src={`${base}images/about-1.JPG`}
+                  alt="Sean Confoy"
+                  className="w-full aspect-[4/5] object-cover rounded-xl"
+                />
+                <img
+                  src={`${base}images/about-2.jpg`}
+                  alt="Sean Confoy"
+                  className="w-full aspect-[4/5] object-cover rounded-xl"
+                />
+                <img
+                  src={`${base}images/about-3.JPG`}
+                  alt="Sean Confoy"
+                  className="w-full aspect-[4/5] object-cover rounded-xl"
+                />
+                <img
+                  src={`${base}images/about-4.JPG`}
+                  alt="Sean Confoy"
+                  className="w-full aspect-[4/5] object-cover rounded-xl"
+                />
+              </div>
             </div>
 
             {/* Content */}
             <div className="flex-1">
-              <h2 className="text-3xl font-bold mb-6">About Me</h2>
               <div className="space-y-4 text-[var(--color-muted)]">
                 <p>
                   I'm a Mechanical Engineering student at <span className="text-white font-medium">Vanderbilt University</span>, 
