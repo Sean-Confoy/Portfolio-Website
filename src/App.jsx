@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import VADL from "./pages/VADL";
 import TOM from "./pages/TOM";
 import CAM from "./pages/CAM";
-import Fusion from "./pages/Fusion";
+import Hammer from "./pages/Hammer";
 
 function Layout() {
   const location = useLocation();
@@ -68,7 +68,7 @@ export default function App() {
           <Route path="projects/vadl" element={<VADL />} />
           <Route path="projects/tom" element={<TOM />} />
           <Route path="projects/cam" element={<CAM />} />
-          <Route path="projects/fusion" element={<Fusion />} />
+          <Route path="projects/hammer" element={<Hammer />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>

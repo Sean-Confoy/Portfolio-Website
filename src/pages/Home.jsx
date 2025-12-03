@@ -37,13 +37,13 @@ const projects = [
       "Cam-follower mechanism simulating human footstep dynamics using Dynacam and MATLAB motion curve optimization.",
   },
   {
-    title: "Fusion Reactor — Controls & Mechanisms",
-    slug: "fusion",
-    image: "pelican-case.png",
-    date: "2023",
-    tag: "Research",
+    title: "Machinist's Hammer — Precision Manufacturing",
+    slug: "hammer",
+    image: "hammer-full (1).png",
+    date: "2024",
+    tag: "Machining",
     description:
-      "Controls-side CAD and mechanical integration for student-built inertial electrostatic confinement fusion reactor.",
+      "Fully functional machinist's hammer machined from 1018 steel using lathe, mill, bandsaw, threading, and knurling operations.",
   },
 ];
 
