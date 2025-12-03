@@ -169,8 +169,8 @@ export default function Home() {
             {/* Image */}
             <div className="flex-shrink-0 w-full md:w-96">
               <img
-                src={`${base}images/headshot.PNG`}
-                alt="Sean working"
+                src={`${base}images/sean-professional-1.jpg`}
+                alt="Sean Confoy"
                 className="w-full aspect-[4/5] object-cover rounded-2xl"
               />
             </div>
