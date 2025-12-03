@@ -207,19 +207,22 @@ export default function Home() {
               <div className="space-y-4 text-[var(--color-muted)]">
                 <p>
                   I'm a Mechanical Engineering student at <span className="text-white font-medium">Vanderbilt University</span>, 
-                  and I've been building things for as long as I can remember. That early interest in making things 
-                  never went away—I love teaching myself new skills and diving deep into challenging projects.
+                  and I've been building things for as long as I can remember. That early curiosity turned into a real 
+                  passion for teaching myself new skills and tackling projects that force me to think creatively and technically.
                 </p>
                 <p>
-                  My engineering journey has taken me through aerospace systems, assistive technology, and even 
-                  fusion reactor development. I thrive on projects that demand creative problem-solving, whether 
-                  it's designing gear trains that survive high-G launches or engineering components for experimental systems.
+                  My engineering experience spans aerospace systems, assistive technology, and even fusion research. 
+                  I'm currently the <span className="text-white font-medium">Lead Payload Engineer</span> for Vanderbilt's 
+                  NASA USLI rocketry team, where I design mechanisms that have to survive high-G launches, rough landings, 
+                  and strict mass and power limits. Whether it's developing a gear-driven soil collection system, integrating 
+                  sensors, or iterating prototypes until they work flawlessly, I enjoy projects that push both my 
+                  problem-solving and hands-on engineering skills.
                 </p>
                 <p>
-                  Outside of engineering, I'm passionate about staying active and spending time outdoors. You'll often 
-                  find me <span className="text-white font-medium">rock climbing</span>, hitting the gym, or 
-                  on the slopes <span className="text-white font-medium">snowboarding</span>. I also enjoy playing 
-                  golf, reading, and most importantly, spending quality time with friends and family.
+                  Outside the lab, I'm almost always moving. I love <span className="text-white font-medium">rock climbing</span>, 
+                  lifting, running around outside, and <span className="text-white font-medium">snowboarding</span> whenever 
+                  I can get to the mountains. I also enjoy playing golf, reading, and spending time with friends and 
+                  family—anything that gives me balance and keeps life fun.
                 </p>
               </div>
             </div>
