@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const stats = [
   { value: "3.99", label: "GPA", color: "text-blue-400" },
   { value: "3", label: "Internships", color: "text-purple-400" },
-  { value: "10+", label: "Projects", color: "text-green-400" },
-  { value: "2+", label: "Years Research", color: "text-pink-400" },
+  { value: "7+", label: "Projects", color: "text-green-400" },
+  { value: "10+", label: "Design Tools", color: "text-pink-400" },
 ];
 
 const projects = [
@@ -60,8 +60,18 @@ const skills = [
   "FEA",
 ];
 
+const aboutPhotos = ["about-1.JPG", "about-2.jpg", "about-3.JPG", "about-4.JPG"];
+
 export default function Home() {
   const base = import.meta.env.BASE_URL;
+  const [currentPhoto, setCurrentPhoto] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhoto((prev) => (prev + 1) % aboutPhotos.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
@@ -87,7 +97,7 @@ export default function Home() {
                 Vanderbilt Aerospace Design Lab (VADL), where I'm designing an autonomous 
                 soil-collection payload for NASA's USLI competition—integrating gear reducers, 
                 sprockets, chain drives, and sensor systems to reliably collect and analyze 
-                ~50–100 mL of soil after landing.
+                at least 50 mL of soil after landing.
               </p>
               <p className="text-[var(--color-muted)] leading-relaxed mb-8 max-w-xl">
                 I'm driven by building mechanisms that actually work under real constraints—tight 
@@ -176,29 +186,34 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-10 text-center">About Me</h2>
           
           <div className="flex flex-col lg:flex-row gap-10 items-start">
-            {/* Image Gallery */}
-            <div className="w-full lg:w-1/2">
-              <div className="grid grid-cols-2 gap-3">
-                <img
-                  src={`${base}images/about-1.JPG`}
-                  alt="Sean Confoy"
-                  className="w-full aspect-[4/5] object-cover rounded-xl"
-                />
-                <img
-                  src={`${base}images/about-2.jpg`}
-                  alt="Sean Confoy"
-                  className="w-full aspect-[4/5] object-cover rounded-xl"
-                />
-                <img
-                  src={`${base}images/about-3.JPG`}
-                  alt="Sean Confoy"
-                  className="w-full aspect-[4/5] object-cover rounded-xl"
-                />
-                <img
-                  src={`${base}images/about-4.JPG`}
-                  alt="Sean Confoy"
-                  className="w-full aspect-[4/5] object-cover rounded-xl"
-                />
+            {/* Cycling Photo */}
+            <div className="w-full lg:w-2/5">
+              <div className="relative aspect-[4/5] rounded-xl overflow-hidden max-w-sm mx-auto">
+                {aboutPhotos.map((photo, index) => (
+                  <img
+                    key={photo}
+                    src={`${base}images/${photo}`}
+                    alt="Sean Confoy"
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                      index === currentPhoto ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+                {/* Photo indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {aboutPhotos.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentPhoto(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentPhoto
+                          ? "bg-white w-6"
+                          : "bg-white/50 hover:bg-white/75"
+                      }`}
+                      aria-label={`View photo ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -206,8 +221,8 @@ export default function Home() {
             <div className="flex-1">
               <div className="space-y-4 text-[var(--color-muted)]">
                 <p>
-                  I'm a Mechanical Engineering student at <span className="text-white font-medium">Vanderbilt University</span>, 
-                  and I've been building things for as long as I can remember. That early curiosity turned into a real 
+                  I'm a Mechanical Engineering student at <span className="text-white font-medium">Vanderbilt University</span> in 
+                  Nashville, Tennessee, and I've been building things for as long as I can remember. That early curiosity turned into a real 
                   passion for teaching myself new skills and tackling projects that force me to think creatively and technically.
                 </p>
                 <p>
