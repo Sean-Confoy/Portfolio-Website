@@ -88,7 +88,7 @@ export default function Home() {
                 Mechanical Engineer | Student
               </p>
               <p className="text-sm text-[var(--color-muted)] mb-6">
-                Nashville, TN
+                Vanderbilt University | Nashville, TN
               </p>
               <p className="text-[var(--color-muted)] leading-relaxed mb-4 max-w-xl">
                 Mechanical engineering student at Vanderbilt University with deep hands-on 
@@ -97,7 +97,7 @@ export default function Home() {
                 Vanderbilt Aerospace Design Lab (VADL), where I'm designing an autonomous 
                 soil-collection payload for NASA's USLI competition—integrating gear reducers, 
                 sprockets, chain drives, and sensor systems to reliably collect and analyze 
-                at least 50 mL of soil after landing.
+                soil after landing.
               </p>
               <p className="text-[var(--color-muted)] leading-relaxed mb-8 max-w-xl">
                 I'm driven by building mechanisms that actually work under real constraints—tight 
@@ -221,8 +221,7 @@ export default function Home() {
             <div className="flex-1">
               <div className="space-y-4 text-[var(--color-muted)]">
                 <p>
-                  I'm a Mechanical Engineering student at <span className="text-white font-medium">Vanderbilt University</span> in 
-                  Nashville, Tennessee, and I've been building things for as long as I can remember. That early curiosity turned into a real 
+                  I'm a Mechanical Engineering student, and I've been building things for as long as I can remember. That early curiosity turned into a real 
                   passion for teaching myself new skills and tackling projects that force me to think creatively and technically.
                 </p>
                 <p>
