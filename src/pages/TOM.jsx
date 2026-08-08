@@ -24,7 +24,7 @@ export default function TOM() {
             <span className="text-xs px-3 py-1 rounded-full border border-green-500/30 text-green-400 bg-green-500/10">
               Makeathon
             </span>
-            <span className="text-sm text-[var(--color-muted)]">2023</span>
+            <span className="text-sm text-[var(--color-muted)]">Sept 2024 - Sept 2025</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             T.O.M. Makeathon — Assistive Technology

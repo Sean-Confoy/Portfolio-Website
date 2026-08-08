@@ -24,7 +24,7 @@ export default function Hammer() {
             <span className="text-xs px-3 py-1 rounded-full border border-orange-500/30 text-orange-400 bg-orange-500/10">
               Machining
             </span>
-            <span className="text-sm text-[var(--color-muted)]">Jul – Oct 2024</span>
+            <span className="text-sm text-[var(--color-muted)]">Jan 2024 - May 2024</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             Machinist's Hammer — Precision Manufacturing
@@ -149,4 +149,6 @@ export default function Hammer() {
     </div>
   );
 }
+
+
 

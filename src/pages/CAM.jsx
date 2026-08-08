@@ -24,7 +24,7 @@ export default function CAM() {
             <span className="text-xs px-3 py-1 rounded-full border border-purple-500/30 text-purple-400 bg-purple-500/10">
               Coursework
             </span>
-            <span className="text-sm text-[var(--color-muted)]">2023</span>
+            <span className="text-sm text-[var(--color-muted)]">Sept 2024 - Dec 2024</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             CAM Project — Walking Simulation
@@ -36,7 +36,7 @@ export default function CAM() {
 
         {/* Images */}
         <div className="grid md:grid-cols-3 gap-4 mb-12">
-          {["cam-physical-model.jpg", "cam-assembly.jpg", "follower-motion.jpg"].map((img) => (
+          {["camfollower.jpg", "cam-physical-model.jpg", "follower-motion.jpg"].map((img) => (
             <div key={img} className="aspect-[4/3] rounded-xl overflow-hidden bg-[var(--color-surface)]">
               <img
                 src={`${base}images/${img}`}
@@ -65,6 +65,20 @@ export default function CAM() {
               Key challenges included balancing desired motion against practical constraints like 
               maximum pressure angle, cam size limitations, and follower spring requirements.
             </p>
+          </div>
+
+          {/* 3D Model */}
+          <h2 className="text-xl font-semibold mb-4">Interactive 3D Model</h2>
+          <p className="text-[var(--color-muted)] mb-4">
+            Drag to rotate, scroll to zoom
+          </p>
+          <div className="aspect-[16/10] rounded-xl overflow-hidden border border-[var(--color-border)] mb-8">
+            <iframe
+              src="https://vanderbilt819.autodesk360.com/shares/public/SH90d2dQT28d5b6028116890c1ebe78c8ce7?mode=embed"
+              title="CAM Assembly"
+              className="w-full h-full"
+              allowFullScreen
+            />
           </div>
 
           {/* Technical Approach */}

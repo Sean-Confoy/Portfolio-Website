@@ -3,26 +3,39 @@ import { Link } from "react-router-dom";
 
 const stats = [
   { value: "3.99", label: "GPA", color: "text-blue-400" },
-  { value: "3", label: "Internships", color: "text-purple-400" },
+  { value: "4", label: "Engineering Roles", color: "text-purple-400" },
   { value: "7+", label: "Projects", color: "text-green-400" },
   { value: "10+", label: "Design Tools", color: "text-pink-400" },
 ];
 
-const projects = [
+const featuredProjects = [
+  {
+    title: "The Boring Company — Utility Extension Subsystem",
+    slug: "boring",
+    image: "boring-company-logo-4k.png",
+    logoOnBlack: true,
+    date: "2026 - Present",
+    tag: "TBC",
+    description:
+      "Owning the utility extension subsystem that supplies boring machines with grout, accelerant, and other fluids as they mine further into a tunnel.",
+  },
   {
     title: "Vanderbilt Aerospace Design Lab — NASA USLI",
     slug: "vadl",
-    image: "newgearbox.jpg",
-    date: "2023 - Present",
+    image: "payload.jpg",
+    date: "Aug 2025 - May 2026",
     tag: "VADL",
     description:
-      "Lead Payload Engineer designing soil-collection mechanisms with ~100:1 gear reduction for NASA-style student rocketry competition.",
+      "Lead Payload Engineer developing an autonomous soil-collection system for NASA Student Launch. 2nd Overall and Payload Award among 33 universities.",
   },
+];
+
+const projects = [
   {
     title: "T.O.M. Makeathon — Assistive Technology",
     slug: "tom",
     image: "tom-wheelchair.jpg",
-    date: "2023",
+    date: "Sept 2024 - Sept 2025",
     tag: "Makeathon",
     description:
       "Designed custom Switch mounts, sun-shade, and sock-aid devices for individuals with mobility challenges during 48-hour design sprint.",
@@ -30,8 +43,8 @@ const projects = [
   {
     title: "CAM Project — Walking Simulation",
     slug: "cam",
-    image: "cam-physical-model.jpg",
-    date: "2023",
+    image: "camfollower.jpg",
+    date: "Sept 2024 - Dec 2024",
     tag: "Coursework",
     description:
       "Cam-follower mechanism simulating human footstep dynamics using Dynacam and MATLAB motion curve optimization.",
@@ -40,7 +53,7 @@ const projects = [
     title: "Machinist's Hammer — Precision Manufacturing",
     slug: "hammer",
     image: "hammer-full (1).png",
-    date: "2024",
+    date: "Jan 2024 - May 2024",
     tag: "Machining",
     description:
       "Fully functional machinist's hammer machined from 1018 steel using lathe, mill, bandsaw, threading, and knurling operations.",
@@ -60,7 +73,7 @@ const skills = [
   "FEA",
 ];
 
-const aboutPhotos = ["about-1.JPG", "about-2.jpg", "about-3.JPG", "about-4.JPG"];
+const aboutPhotos = ["about11.JPG", "about22.jpeg", "about33.JPG", "about44.JPG"];
 
 export default function Home() {
   const base = import.meta.env.BASE_URL;
@@ -85,26 +98,36 @@ export default function Home() {
                 Hi, I'm <span className="text-blue-400">Sean Confoy</span>
               </h1>
               <p className="text-lg text-[var(--color-muted)] mb-2">
-                Mechanical Engineer | Student
+                Mechanical Engineer
               </p>
               <p className="text-sm text-[var(--color-muted)] mb-6">
-                Vanderbilt University | Nashville, TN
+                The Boring Company | Bastrop, TX
               </p>
               <p className="text-[var(--color-muted)] leading-relaxed mb-4 max-w-xl">
-                Mechanical engineering student at Vanderbilt University with deep hands-on 
-                experience in complex mechanism design, rapid prototyping, and testing. Serving as 
-                the <span className="text-white font-medium">Lead Payload Engineer</span> for the 
-                Vanderbilt Aerospace Design Lab (VADL), where I'm designing an autonomous 
-                soil-collection payload for NASA's USLI competition—integrating gear reducers, 
-                sprockets, chain drives, and sensor systems to reliably collect and analyze 
-                soil after landing.
+                I&apos;m a Mechanical Engineer who graduated from Vanderbilt University May 2026 with deep
+                hands-on experience in complex mechanism design, rapid prototyping, and testing. I
+                currently work for <span className="text-white font-medium">The Boring Company (TBC)</span> in
+                Bastrop, TX where I am in charge of the utility extension subsystem to provide the
+                boring machines with grout, accelerant, and other necessary fluids as they mine further
+                into a tunnel. Before TBC, I served as the{" "}
+                <span className="text-white font-medium">Lead Payload Engineer</span> for the Vanderbilt
+                Aerospace Design Lab (VADL), where I designed an autonomous soil-collection payload for
+                NASA&apos;s USLI competition—integrating gear reducers, a belt and pulley drive, and soil
+                sensors to reliably collect and analyze soil after rocket landing.
+              </p>
+              <p className="text-[var(--color-muted)] leading-relaxed mb-4 max-w-xl">
+                I&apos;m driven by building mechanisms that actually work under real constraints—tight mass
+                allowance, limited power, difficult-to-model load cases, and rugged field conditions.
+                Whether it&apos;s iterating gearbox designs, running FEA and SolidWorks assemblies, or
+                troubleshooting chain tensioners at 2 a.m., I enjoy translating complicated/novel
+                engineering challenges into clean, functional, and manufacturable hardware.
               </p>
               <p className="text-[var(--color-muted)] leading-relaxed mb-8 max-w-xl">
-                I'm driven by building mechanisms that actually work under real constraints—tight 
-                mass budgets, limited power, unpredictable landing orientations, and rugged field 
-                conditions. Whether it's iterating gearbox designs, running FEA and SolidWorks 
-                assemblies, or troubleshooting chain tensioners at 2 a.m., I enjoy translating 
-                complicated engineering challenges into clean, functional, and manufacturable solutions.
+                Outside the lab, I like to stay active. I love{" "}
+                <span className="text-white font-medium">rock climbing</span>, lifting, running around
+                outside, and <span className="text-white font-medium">snowboarding</span> whenever I can
+                make the time. I also enjoy playing golf, reading, and spending time with friends and
+                family—anything that gives me balance and keeps life fun.
               </p>
 
               {/* Buttons */}
@@ -145,14 +168,33 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Profile Photo */}
-            <div className="flex-shrink-0">
-              <div className="profile-ring">
-                <img
-                  src={`${base}images/headshot.PNG`}
-                  alt="Sean Confoy"
-                  className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover"
-                />
+            {/* Cycling photos */}
+            <div className="flex-shrink-0 w-72 md:w-96 lg:w-[28rem]">
+              <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-[var(--color-surface)]">
+                {aboutPhotos.map((photo, index) => (
+                  <img
+                    key={photo}
+                    src={`${base}images/${photo}`}
+                    alt="Sean Confoy"
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                      index === currentPhoto ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {aboutPhotos.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentPhoto(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentPhoto
+                          ? "bg-white w-6"
+                          : "bg-white/50 hover:bg-white/75"
+                      }`}
+                      aria-label={`View photo ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -180,70 +222,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="px-6 py-20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center">About Me</h2>
-          
-          <div className="flex flex-col lg:flex-row gap-10 items-start">
-            {/* Cycling Photo */}
-            <div className="w-full lg:w-2/5">
-              <div className="relative aspect-[4/5] rounded-xl overflow-hidden max-w-sm mx-auto">
-                {aboutPhotos.map((photo, index) => (
-                  <img
-                    key={photo}
-                    src={`${base}images/${photo}`}
-                    alt="Sean Confoy"
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
-                      index === currentPhoto ? "opacity-100" : "opacity-0"
-                    }`}
-                  />
-                ))}
-                {/* Photo indicators */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                  {aboutPhotos.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentPhoto(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentPhoto
-                          ? "bg-white w-6"
-                          : "bg-white/50 hover:bg-white/75"
-                      }`}
-                      aria-label={`View photo ${index + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="flex-1">
-              <div className="space-y-4 text-[var(--color-muted)]">
-                <p>
-                  I'm a Mechanical Engineering student, and I've been building things for as long as I can remember. That early curiosity turned into a real 
-                  passion for teaching myself new skills and tackling projects that force me to think creatively and technically.
-                </p>
-                <p>
-                  My engineering experience spans aerospace systems, assistive technology, and even fusion research. 
-                  I'm currently the <span className="text-white font-medium">Lead Payload Engineer</span> for Vanderbilt's 
-                  NASA USLI rocketry team, where I design mechanisms that have to survive high-G launches, rough landings, 
-                  and strict mass and power limits. Whether it's developing a gear-driven soil collection system, integrating 
-                  sensors, or iterating prototypes until they work flawlessly, I enjoy projects that push both my 
-                  problem-solving and hands-on engineering skills.
-                </p>
-                <p>
-                  Outside the lab, I'm almost always moving. I love <span className="text-white font-medium">rock climbing</span>, 
-                  lifting, running around outside, and <span className="text-white font-medium">snowboarding</span> whenever 
-                  I can get to the mountains. I also enjoy playing golf, reading, and spending time with friends and 
-                  family—anything that gives me balance and keeps life fun.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Technical Skills Section */}
       <section className="px-6 py-16">
         <div className="max-w-4xl mx-auto">
@@ -266,40 +244,80 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Projects</h2>
           <p className="text-center text-[var(--color-muted)] mb-12 max-w-2xl mx-auto">
-            I've worked on a variety of projects, from NASA rocketry to assistive technology. 
+            I&apos;ve worked on a variety of projects, from tunnel systems to NASA rocketry.
             Here are a few of my favorites:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {/* Featured: TBC + VADL */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {featuredProjects.map((project) => (
+              <Link
+                key={project.slug}
+                to={`/projects/${project.slug}`}
+                className="group bg-[var(--color-surface)] rounded-xl overflow-hidden border border-[var(--color-border)] hover:border-[var(--color-accent-blue)] transition-colors"
+              >
+                <div className={`aspect-[16/9] overflow-hidden ${project.logoOnBlack ? "bg-black" : "bg-[var(--color-bg)]"}`}>
+                  {project.image ? (
+                    <img
+                      src={`${base}images/${encodeURIComponent(project.image)}`}
+                      alt={project.title}
+                      className={`w-full h-full ${
+                        project.logoOnBlack
+                          ? "object-cover"
+                          : "object-cover group-hover:scale-105 transition-transform duration-500"
+                      }`}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-orange-500/20 via-[var(--color-surface)] to-[var(--color-bg)]">
+                      <p className="text-3xl md:text-4xl font-bold tracking-tight text-orange-300">
+                        TBC
+                      </p>
+                      <p className="text-sm text-[var(--color-muted)]">The Boring Company</p>
+                    </div>
+                  )}
+                </div>
+                <div className="p-6 md:p-7">
+                  <h3 className="font-semibold text-xl mb-2 group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-sm text-[var(--color-muted)]">{project.date}</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">
+                      {project.tag}
+                    </span>
+                  </div>
+                  <p className="text-[var(--color-muted)] leading-relaxed">{project.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Other projects */}
+          <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {projects.map((project) => (
               <Link
                 key={project.slug}
                 to={`/projects/${project.slug}`}
                 className="group bg-[var(--color-surface)] rounded-xl overflow-hidden border border-[var(--color-border)] hover:border-[var(--color-accent-blue)] transition-colors"
               >
-                {/* Image */}
                 <div className="aspect-[16/10] overflow-hidden">
                   <img
-                    src={`${base}images/${project.image}`}
+                    src={`${base}images/${encodeURIComponent(project.image)}`}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-
-                {/* Content */}
-                <div className="p-5">
-                  <h3 className="font-semibold text-lg mb-2 group-hover:text-blue-400 transition-colors">
+                <div className="p-4">
+                  <h3 className="font-semibold text-base mb-2 group-hover:text-blue-400 transition-colors line-clamp-2">
                     {project.title}
                   </h3>
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-sm text-[var(--color-muted)]">
-                      {project.date}
-                    </span>
-                    <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xs text-[var(--color-muted)]">{project.date}</span>
+                    <span className="text-[10px] px-2 py-0.5 rounded-full border border-[var(--color-border)] text-[var(--color-muted)]">
                       {project.tag}
                     </span>
                   </div>
-                  <p className="text-sm text-[var(--color-muted)] line-clamp-3">
+                  <p className="text-xs text-[var(--color-muted)] line-clamp-3">
                     {project.description}
                   </p>
                 </div>

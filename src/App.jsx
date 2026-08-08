@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashRouter, Routes, Route, Link, Outlet, useLocation } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -6,6 +6,17 @@ import VADL from "./pages/VADL";
 import TOM from "./pages/TOM";
 import CAM from "./pages/CAM";
 import Hammer from "./pages/Hammer";
+import Boring from "./pages/Boring";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function Layout() {
   const location = useLocation();
@@ -20,6 +31,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
+      <ScrollToTop />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)]/90 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -31,9 +43,6 @@ function Layout() {
               <>
                 <button onClick={() => scrollTo('home')} className="text-[var(--color-muted)] hover:text-white transition-colors">
                   Home
-                </button>
-                <button onClick={() => scrollTo('about')} className="text-[var(--color-muted)] hover:text-white transition-colors">
-                  About
                 </button>
                 <button onClick={() => scrollTo('projects')} className="text-[var(--color-muted)] hover:text-white transition-colors">
                   Projects
@@ -65,6 +74,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="projects/boring" element={<Boring />} />
           <Route path="projects/vadl" element={<VADL />} />
           <Route path="projects/tom" element={<TOM />} />
           <Route path="projects/cam" element={<CAM />} />
