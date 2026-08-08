@@ -116,7 +116,7 @@ export default function VADL() {
               For expansive additional detail on the payload and entire rocket I urge you to browse
               the{" "}
               <a
-                href={asset("Vanderbilt University - 2026 - FRR Report.pdf")}
+                href={asset("Vanderbilt University - 2026 - FRR Report-compressed.pdf")}
                 target="_blank"
                 rel="noreferrer"
                 className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
@@ -184,7 +184,7 @@ export default function VADL() {
                   analysis, and design rationale for the VADL payload system.
                 </p>
                 <a
-                  href={asset("Vanderbilt University - 2026 - FRR Report.pdf")}
+                  href={asset("Vanderbilt University - 2026 - FRR Report-compressed.pdf")}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors"
@@ -201,7 +201,7 @@ export default function VADL() {
           {/* Links */}
           <div className="flex flex-wrap gap-4">
             <a
-              href={asset("Vanderbilt University - 2026 - FRR Report.pdf")}
+              href={asset("Vanderbilt University - 2026 - FRR Report-compressed.pdf")}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
