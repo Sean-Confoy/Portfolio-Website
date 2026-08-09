@@ -133,7 +133,7 @@ export default function Home() {
               {/* Buttons */}
               <div className="flex flex-wrap items-center gap-4 justify-center md:justify-start">
                 <a
-                  href={`${base}Sean-Confoy-Resume.pdf`}
+                  href={`${base}Sean-Confoy-Resume.pdf?v=2026-08-09`}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
